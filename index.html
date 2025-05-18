@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        article {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .contact-info {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        a.email {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a.email:hover {
+            text-decoration: underline;
+        }
+        /* 隐藏非首页内容（默认只显示首页） */
+        #about, #contact {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href="#" onclick="showSection('home')">首页</a>
+        <a href="#" onclick="showSection('about')">关于</a>
+        <a href="#" onclick="showSection('contact')">联系</a>
+    </nav>
+
+    <!-- 首页内容 -->
+    <section id="home">
+        <header>
+            <h1>欢迎来到我的博客</h1>
+            <p>记录技术、生活和思考</p>
+        </header>
+
+        <article>
+            <h2>我的第一篇文章</h2>
+            <p>这里是文章内容。你可以在这里写技术分享、生活感悟或其他任何你想记录的内容。</p>
+            <p><a href="#">阅读更多...</a></p>
+        </article>
+
+        <article>
+            <h2>学习GitHub Pages</h2>
+            <p>今天学会了用GitHub Pages搭建免费博客，非常方便！</p>
+            <p><a href="#">阅读更多...</a></p>
+        </article>
+    </section>
+
+    <!-- 关于页面 -->
+    <section id="about">
+        <header>
+            <h1>关于我</h1>
+        </header>
+        <article>
+            <p>你好！我是博主，热爱技术、写作和分享。</p>
+            <p>这个博客是用 GitHub Pages 搭建的，完全免费且支持自定义域名。</p>
+        </article>
+    </section>
+
+    <!-- 联系页面 -->
+    <section id="contact">
+        <header>
+            <h1>联系我</h1>
+        </header>
+        <div class="contact-info">
+            <h2>📧 邮箱</h2>
+            <p>
+                你可以通过邮箱联系我：
+                <a href="mailto:poster@yi-chen.xyz" class="email">poster@yi-chen.xyz</a>
+            </p>
+            
+            <h2>📱 社交媒体</h2>
+            <p>（这里可以添加你的 Twitter/GitHub 等链接）</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 我的个人博客 | 由 GitHub Pages 驱动</p>
+    </footer>
+
+    <!-- 简单的页面切换逻辑 -->
+    <script>
+        function showSection(sectionId) {
+            // 隐藏所有部分
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            
+            // 显示选中的部分
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
